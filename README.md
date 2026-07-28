@@ -1,19 +1,25 @@
-# 📦 Smart Courier Management System
+# 🚚 Smart Courier Management System
 
-A console-based Courier Management System developed using **Python** and **MySQL**. The application manages courier shipments through CRUD operations and generates business reports using SQL queries. Realistic test data is generated using the **Faker** library.
+A complete end-to-end **Courier Management System** built using **Python, MySQL, SQL, and Power BI**. The project manages courier operations through CRUD functionality, stores data in a relational MySQL database, generates business reports using SQL, and provides an interactive Power BI dashboard for shipment, revenue, branch, and customer analytics.
+
+Realistic sample data is generated using the **Faker** library to simulate real-world logistics operations.
 
 ---
 
-## 🚀 Features
+# 📌 Features
 
-### Shipment Management
+## 🚛 Shipment Management
+
 - View all shipments
 - Search shipment by Shipment ID
 - Add a new shipment
 - Update shipment status
 - Delete shipment
 
-### Business Reports
+---
+
+## 📈 Business Reports
+
 - Total Shipments
 - Shipment Status Report
 - Branch-wise Shipment Report
@@ -21,27 +27,48 @@ A console-based Courier Management System developed using **Python** and **MySQL
 - Top 5 Customers
 - Monthly Shipment Trend
 
-### Data Generation
-- Generate realistic customer records using Faker
-- Generate branch records
-- Generate shipment records with realistic dates and statuses
+---
+
+## 📊 Power BI Executive Dashboard
+
+- Total Shipments KPI
+- Total Revenue KPI
+- Delivered & Pending Shipments
+- Average Shipping Cost
+- Average Shipment Weight
+- Revenue by Branch
+- Monthly Shipment Trend
+- Shipment Status Distribution
+- Branch-wise Shipment Analysis
+- Top Customers by Shipments
+- Interactive Filters (Status, Branch, City)
 
 ---
 
-## 🛠 Tech Stack
+## 🎲 Data Generation
+
+- Generate realistic customer records using Faker
+- Generate branch records
+- Generate shipment records with realistic booking dates and delivery statuses
+
+---
+
+# 🛠 Tech Stack
 
 - Python
 - MySQL
 - SQL
+- Power BI
+- DAX
 - Faker
 - mysql-connector-python
 - Tabulate
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```text
+```
 Smart-Courier-Management-System
 │
 ├── SQL/
@@ -56,29 +83,38 @@ Smart-Courier-Management-System
 ├── reports.py
 ├── main.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── PowerBI/
+    └── Courier_Dashboard.pbix
 ```
 
 ---
 
-## 🗄 Database Schema
+# 🗄 Database Schema
 
-The project consists of three relational tables:
+The project consists of three relational tables.
 
-### Customers
+## Customers
+
 - customer_id
 - customer_name
 - phone
 - email
 - city
 
-### Branches
+---
+
+## Branches
+
 - branch_id
 - branch_name
 - city
 - manager_name
 
-### Shipments
+---
+
+## Shipments
+
 - shipment_id
 - customer_id
 - branch_id
@@ -93,13 +129,13 @@ The project consists of three relational tables:
 
 ---
 
-## 📊 SQL Concepts Used
+# 📊 SQL Concepts Used
 
 - SELECT
 - INSERT
 - UPDATE
 - DELETE
-- JOIN
+- INNER JOIN
 - GROUP BY
 - ORDER BY
 - COUNT()
@@ -112,29 +148,77 @@ The project consists of three relational tables:
 
 ---
 
-## ⚙️ Installation
+# 📈 Power BI Dashboard
 
-### 1. Clone the repository
+The project includes an interactive executive dashboard connected to the MySQL database.
+
+### Dashboard Highlights
+
+- Executive KPI Cards
+- Monthly Shipment Trend
+- Revenue by Branch
+- Shipment Status Distribution
+- Branch-wise Shipment Analysis
+- Top Customers by Shipments
+- Interactive Slicers (Status, Branch, City)
+
+---
+
+# 🖼 Dashboard Preview
+
+> Add your dashboard screenshot inside an **images** folder.
+
+![Dashboard](images/dashboard.png)
+
+# 🔄 Project Workflow
+
+```
+Faker
+   │
+   ▼
+MySQL Database
+   │
+   ▼
+Python CRUD Application
+   │
+   ▼
+SQL Reports
+   │
+   ▼
+Power BI Dashboard
+```
+
+---
+
+# ⚙ Installation
+
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/Smart-Courier-Management-System.git
 ```
 
-### 2. Move into the project
+---
+
+## 2. Navigate to the project folder
 
 ```bash
 cd Smart-Courier-Management-System
 ```
 
-### 3. Install dependencies
+---
+
+## 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Create the database
+---
 
-Run:
+## 4. Create the database
+
+Run
 
 ```
 SQL/courier_database.sql
@@ -142,16 +226,20 @@ SQL/courier_database.sql
 
 using MySQL Workbench.
 
-### 5. Configure database credentials
+---
 
-Open `config.py` and update:
+## 5. Configure Database Credentials
+
+Open **config.py** and update:
 
 - Host
 - Username
 - Password
 - Database Name
 
-### 6. Generate sample data
+---
+
+## 6. Generate Sample Data
 
 ```bash
 python generate_customers.py
@@ -159,7 +247,9 @@ python generate_branches.py
 python generate_shipments.py
 ```
 
-### 7. Run the application
+---
+
+## 7. Run the Application
 
 ```bash
 python main.py
@@ -167,46 +257,72 @@ python main.py
 
 ---
 
-## 📈 Sample Reports
+# 📊 Business Insights Generated
 
-The application generates reports such as:
+The dashboard provides insights such as:
 
-- Shipment Status Distribution
-- Branch-wise Shipment Count
-- Revenue Analysis
+- Total Shipments Processed
+- Revenue Generated
+- Delivery Success Rate
+- Pending & Cancelled Shipments
+- Branch Performance
+- Monthly Shipment Trends
 - Top Customers
-- Monthly Shipment Trend
+- Average Shipping Cost
+- Average Shipment Weight
 
 ---
 
-## 🎯 Learning Outcomes
+# 💡 Skills Demonstrated
 
-This project helped me gain practical experience with:
-
-- Python programming
-- MySQL database design
-- CRUD operations
-- SQL joins and aggregate functions
-- Business report generation
-- Faker for realistic data generation
-- Modular Python programming
-
----
-
-## 🔮 Future Enhancements
-
-- User authentication
-- Export reports to Excel/PDF
-- Power BI dashboard integration
-- GUI using Tkinter
-- Shipment tracking using Tracking ID
+- Python Programming
+- MySQL
+- SQL
+- Power BI
+- DAX
+- Data Analysis
+- Data Visualization
+- Relational Database Design
+- CRUD Operations
+- Business Reporting
+- Dashboard Development
+- Data Modeling
 
 ---
 
-## 👨‍💻 Author
+# 🎯 Learning Outcomes
+
+Through this project I gained practical experience in:
+
+- Designing relational databases
+- Integrating Python with MySQL
+- Building CRUD applications
+- Writing SQL queries for business reporting
+- Creating interactive Power BI dashboards
+- Developing KPI cards using DAX
+- Data visualization and storytelling
+- Generating realistic datasets using Faker
+- Modular Python application development
+
+---
+
+# 🚀 Future Enhancements
+
+- User Authentication
+- Shipment Tracking using Tracking ID
+- Email/SMS Notifications
+- Export Reports to Excel/PDF
+- Predictive Delivery Time using Machine Learning
+- Flask-based Web Application
+
+---
+
+# 👨‍💻 Author
 
 **Prashant Bhati**
 
 Final Year B.E. Computer Science Student
 
-Panjab University, Chandigarh
+UIET, Panjab University, Chandigarh
+
+---
