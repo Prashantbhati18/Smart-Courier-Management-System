@@ -166,8 +166,6 @@ The project includes an interactive executive dashboard connected to the MySQL d
 
 # 🖼 Dashboard Preview
 
-> Add your dashboard screenshot inside an **images** folder.
-
 ![Dashboard](images/dashboard.png)
 
 # 🔄 Project Workflow
